@@ -5,6 +5,9 @@ var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var connect = require('gulp-connect');
 var runSequence = require('run-sequence');
+var fileinclude = require('gulp-file-include');
+var clean = require('gulp-clean');
+var sass = require('gulp-sass');
 
 
 // *** tasks *** ///
@@ -42,16 +45,19 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('copyfiles', function() {
-   gulp.src('./src/**/*')
-   .pipe(gulp.dest('./srv'));
+   gulp.src('./src/mod-minutes/**/*').pipe(gulp.dest('./srv/mod-minutes'));
+   gulp.src('./src/img/**/*').pipe(gulp.dest('./srv/img'));
+   gulp.src('./src/js/**/*').pipe(gulp.dest('./srv/js'));
 });
 
-// gulp.task('style', function() {
-//   return gulp.src('src/**/*.js')
-//     .pipe(jscs())
-//     .pipe(jscs.reporter())
-//     .pipe(jscs.reporter('fail'));
-// });
+gulp.task('fileinclude', function() {
+  gulp.src('./src/**/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./srv'));
+});
 
 gulp.task('watch', function() {
   gulp.watch('./src/js/*.js', ['jshint', 'javascript', 'copyfiles']);
@@ -59,13 +65,26 @@ gulp.task('watch', function() {
   gulp.watch(['./src/css/*.css'], ['css', 'copyfiles']);
 });
 
-// *** defailt task *** //
+gulp.task('sass', function () {
+  return gulp.src('./src/scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./srv/css'));
+});
+ 
+gulp.task('sass:watch', function () {
+  gulp.watch('./src/scss/**/*.scss', ['sass']);
+});
+
+// *** default task *** //
 gulp.task('default', function() {
+  gulp.src('./srv', {read: false}).pipe(clean({force: true}));
+
   runSequence(
     ['jshint'],
-    // ['style'],
+    ['sass'],
     ['watch'],
     ['copyfiles'],
+    ['fileinclude'],
     ['connect']
   );
 });
