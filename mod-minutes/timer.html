@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Styled Time Tracker 6_19_v2 - CodePen</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  <link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet">  
+  <link rel="stylesheet" id="my-stylesheet" href="css/color_disney_create.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <div id="content">
+
+  <div id="timer-wrapper">
+
+    <!-- HEADER -->
+    <header class="app-title">
+      <h1>Mod Minutes</h1>
+      <i id="save-response">Saved</i>
+	  <i id="alarm-response">Alarm Set</i>
+      <p id="enter-stats" class="stats-link"><span class="fontawesome-bar-chart"></span></p>
+      <p id="enter-settings" class="settings-link"><span class="fontawesome-cog"></span></p>
+    </header>
+
+    <!-- OPTIONS -->    
+    <section class="options">
+      <div class="controls">
+        <button id="start-watch"><span class="fontawesome-play"></span></button><button id="pause-watch"><span class="fontawesome-pause"></span></button><button id="reset-watch"><span class="fontawesome-trash"></span></button><button id="save-watch"><span class="fontawesome-save"></span></button>
+      </div>   
+      <h2 id="current-activity" class="current-activity"></h2>
+    </section>
+
+    <!-- TIME -->
+    <div id="time-container" class="time-container">
+      <time id="time-count" class="time-count">     
+      </time>
+      <p>Hours</p><p>Minutes</p><p>Seconds</p>
+    </div>
+
+  </div><!-- END TIMER WRAPPER -->
+
+  <div id="stats" class="stats">
+    <h3>Stats <aside id="exit-stats"><span class="fontawesome-arrow-left"></span><span> back</span></aside></h3>
+    <ul id="stat-list" class="activities stat-list">
+      <li>
+        <h5 class="digital-painter stat-item">Digital Painter</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>				
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="animods stat-item">Animods</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>		
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="photo-mashup stat-item">Photo Mashup</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p> 
+      </li>
+      <li>
+        <h5 class="music-slideshow stat-item">Music Slideshow</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="comics stat-item">Comics</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p> 
+      </li>
+      <li>
+        <h5 class="comments stat-item">Comments</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="shoutouts stat-item">Shoutouts</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="flipbook stat-item">Flipbook</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>	        
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="stamps stat-item">Stamps</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="kerpoof-pii stat-item">Kerpoof-PII</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="create-shoutouts stat-item">Create Shoutouts</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="matterhorn-shoutouts stat-item">Matterhorn Shoutouts</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="disney-xd-shoutouts stat-item">Disney XD Shoutouts</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li>
+      <li>
+        <h5 class="youtube stat-item">Youtube</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li> 		  
+      <li>
+        <h5 class="pirate-and-princess-event stat-item">Pirate and Princess Event</h5>
+		<strong><span class="fontawesome-angle-up increment"></span><span class="fontawesome-angle-down decrement"></span><span class="fontawesome-trash erase-stat"></span></strong>			
+        <p class="stat-holder"></p>
+      </li> 	  
+    </ul>
+	<a id="stats-erase" class="stats-erase"><span class="fontawesome-trash"></span></a>
+  </div>
+
+  <!-- SETTINGS MENU -->
+  <div id="settings" class="settings">
+    <p id="exit-settings"><strong>Settings</strong><i>back</i><span class="fontawesome-arrow-up"></span></p>
+    <div class="setting-container">
+    <h3 id="alarm-header" class="alarm-header">Alarm</h3>
+    <ul id="alarm">
+      <li><span>hours</span><input id="set-hour" class="alarm-input" type="text" /></li>
+        <li><span>minutes</span><input id="set-min" class="alarm-input" type="text" /></li>
+        <li><span>seconds</span><input id="set-sec" class="alarm-input" type="text" /></li>
+            <li><input type="submit" id="submit-button" value="SET ALARM" /></li>
+    </ul>
+    </div>
+    <div class="setting-container">
+    <h3 id="color-scheme-header" class="color-scheme-header">Color Scheme</h3>
+    <ul id="color-scheme">
+      <li><a href="#" id="cherry-garcia" rel="css/color_cherry_garcia.css">Cherry Garcia</a></li>
+      <li><a href="#" id="strawberry-cheesecake" rel="css/color_strawberry_cheesecake.css">Strawberry Cheesecake</a></li>
+      <li><a href="#" id="mint-chocolate" rel="css/color_mint_chocolate.css">Mint Chocolate Chunk</a></li>      
+      <li><a href="#" id="disney-create" rel="css/color_disney_create.css">Default</a></li>
+    </ul>
+    </div>
+  </div>  
+
+</div><!-- END CONTENT -->
+
+<!-- ACTIVITIES MENU -->
+<div id="activities-container" class="activities-container">
+  <ul id="activities" class="activities">
+    <li>
+      <h4 id="digital-painter">Digital Painter</h4>
+    </li>
+    <li>
+      <h4 id="animods">Animods</h4>
+    </li>
+    <li>
+      <h4 id="photo-mashup">Photo Mashup</h4>
+    </li>
+    <li>
+      <h4 id="music-slideshow">Music Slideshow</h4>
+    </li>
+    <li>
+      <h4 id="comics">Comics</h4>
+    </li>
+    <li>
+      <h4 id="comments">Comments</h4>
+    </li>
+    <li>
+      <h4 id="shoutouts">Shoutouts</h4>
+    </li>
+    <li>
+      <h4 id="flipbook">Flipbook</h4>
+    </li>
+    <li>
+      <h4 id="stamps">Stamps</h4>
+    </li>
+    <li>
+      <h4 id="kerpoof-pii">Kerpoof/PII</h4>
+    </li>
+    <li>
+      <h4 id="create-shoutouts">Create Shoutouts</h4>
+    </li>
+    <li>
+      <h4 id="matterhorn-shoutouts">Matterhorn Shoutouts</h4>
+    </li>
+    <li>
+      <h4 id="disney-xd-shoutouts">Disney XD Shoutouts</h4>
+    </li>
+    <li>
+      <h4 id="pirate-and-princess-event">Pirate and Princess Event</h4>
+    </li>
+    <li>
+      <h4 id="youtube">Youtube</h4>
+    </li>	
+  </ul>
+  <a id="activities-exit" class="activities-exit"><span class="fontawesome-remove"></span></a>
+</div><!-- END HIDDEN MENU -->
+
+<!-- ALARM DIALOG -->
+<!-- <div id="dialog" title="Time's up!">
+</div> -->
+
+<!--   <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.js" type="text/javascript"></script>  
+  <script src="js/clone.js" type="text/javascript"></script>
+  <script src="js/refresh.js" type="text/javascript"></script>
+</body>
+
+</html>
