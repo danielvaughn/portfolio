@@ -1,38 +1,26 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Daniel Vaughn - SPAN The Rockies</title>
-    <meta name='viewport' content='width=device-width'>
-    <style type="text/css">
-        .header-container {
-            background: #000 url('img/site/bg_optim.jpg') no-repeat center center;
-            background-attachment: fixed;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-</head>
+@@include('./partials/header.html', {
+    "name": "Daniel Vaughn - SPAN The Rockies"
+})
 
-<body>
-    <div id="wrapper">
-        <div class="header-container">
-            <header>
-                <nav role='navigation'>
-                    <h1><a href="index.html">Daniel Vaughn</a></h1>
-                    <ul>
-                        <li><a href="info.html">Info</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <p>SPAN The Rockies 2012</p>
-        </div>
-        <div class="content-wrapper">
-            <div class="content-work">
-                <p>SPAN (Safehouse Progressive Alliance for Non-violence) is a non-profit center in Boulder that provides a safe haven for victims of domestic assault. In 2012 they hired me to redesign their annual cycling tour. While I completed their logo and peripherals, they decided not to complete the redesign of the tour's website.</p>
-                <div class="row"><img class="mobile-shot" src="img/str/str_mobile.jpg"><img class="desk-shot" src="img/str/str_desktop.jpg"></div>
-            </div>
+<div id="wrapper">
+    <div class="header-container">
+        <header>
+            <nav role='navigation'>
+                <h1><a href="index.html">Daniel Vaughn</a></h1>
+                <ul>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>SPAN The Rockies 2012</p>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-work">
+            <p>SPAN (Safehouse Progressive Alliance for Non-violence) is a non-profit center in Boulder that provides a safe haven for victims of domestic assault. In 2012 they hired me to redesign their annual cycling tour. While I completed their logo and peripherals, they decided not to complete the redesign of the tour's website.</p>
+            <div class="row"><img class="mobile-shot" src="img/str/str_mobile.jpg"><img class="desk-shot" src="img/str/str_desktop.jpg"></div>
         </div>
     </div>
+</div>
 
-    @@include('./partials/footer.html')
+@@include('./partials/footer.html')

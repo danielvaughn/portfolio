@@ -1,71 +1,59 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Daniel Vaughn Design and Development</title>
-    <meta name='viewport' content='width=device-width'>
-    <style type="text/css">
-        .header-container {
-            background: #000 url('img/site/bg_optim.jpg') no-repeat center center;
-            background-attachment: fixed;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-</head>
+@@include('./partials/header.html', {
+    "name": "Daniel Vaughn Design and Development"
+})
 
-<body class="no-fouc">
-    <div id="wrapper">
-        <div class="header-container">
-            <header>
-                <nav role='navigation'>
-                    <h1><a href="index.html">Daniel Vaughn</a></h1>
-                    <ul>
-                        <li><a href="info.html">Info</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <p>My name is Daniel Vaughn. I am a developer, designer, &amp; artist living in New York City.</p>
-        </div>
-        <div class="content-wrapper">
-            <div class="content">
-                <p>Learn more about <a href="info.html">me</a>, view some of my <a href="http://codepen.io/danielvaughn" target="_blank">code snippets</a>, or scroll on to see my work.</p>
-                <div class="work">
-                    <ul class="filter-list">
-                        <li class="filter" data-filter="all">All</li>
-                        <li class="filter" data-filter="print">Print</li>
-                        <li class="filter" data-filter="web">Web</li>
-                    </ul>
-                    <ul id="grid">
-                        <li class="mix web">
-                            <a href="assemblies-of-yahweh.html"><img src="img/thumb/aoy_thumb.jpg" alt="" /></a>
-                        </li>
-                        <li class="mix print">
-                            <a href="spectra.html"><img src="img/thumb/spectra_thumb.jpg" alt="" /></a>
-                        </li>
-                        <li class="mix print">
-                            <a href="casserole-company.html"><img src="img/thumb/cass_thumb.png" alt="" /></a>
-                        </li>
-                        <li class="mix print">
-                            <a href="mattography.html"><img src="img/thumb/matt_thumb.png" alt="" /></a>
-                        </li>
-                        <li class="mix web">
-                            <a href="mod-minutes.html"><img src="img/thumb/mm_thumb.png" alt="" /></a>
-                        </li>
-                        <li class="mix web">
-                            <a href="studio-luminoso.html"><img src="img/thumb/sl_thumb.jpg" alt="" /></a>
-                        </li>
-                        <li class="mix print">
-                            <a href="katie-kakes.html"><img src="img/thumb/katie_thumb.png" alt="" /></a>
-                        </li>
-                        <li class="mix web">
-                            <a href="ui-toolkit.html"><img src="img/thumb/toolkit_thumb.jpg" alt="" /></a>
-                        </li>
-                    </ul>
-                </div>
+<div id="wrapper">
+    <div class="header-container">
+        <header>
+            <nav role='navigation'>
+                <h1><a href="index.html">Daniel Vaughn</a></h1>
+                <ul>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>My name is Daniel Vaughn. I am a developer, designer, &amp; artist living in New York City.</p>
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <p>Learn more about <a href="info.html">me</a>, view some of my <a href="http://codepen.io/danielvaughn" target="_blank">code snippets</a>, or scroll on to see my work.</p>
+            <div class="work">
+                <ul class="filter-list">
+                    <li class="filter" data-filter="all">All</li>
+                    <li class="filter" data-filter="print">Print</li>
+                    <li class="filter" data-filter="web">Web</li>
+                </ul>
+                <ul id="grid">
+                    <li class="mix web">
+                        <a href="assemblies-of-yahweh.html"><img src="img/thumb/aoy_thumb.jpg" alt="" /></a>
+                    </li>
+                    <li class="mix print">
+                        <a href="spectra.html"><img src="img/thumb/spectra_thumb.jpg" alt="" /></a>
+                    </li>
+                    <li class="mix print">
+                        <a href="casserole-company.html"><img src="img/thumb/cass_thumb.png" alt="" /></a>
+                    </li>
+                    <li class="mix print">
+                        <a href="mattography.html"><img src="img/thumb/matt_thumb.png" alt="" /></a>
+                    </li>
+                    <li class="mix web">
+                        <a href="mod-minutes.html"><img src="img/thumb/mm_thumb.png" alt="" /></a>
+                    </li>
+                    <li class="mix web">
+                        <a href="studio-luminoso.html"><img src="img/thumb/sl_thumb.jpg" alt="" /></a>
+                    </li>
+                    <li class="mix print">
+                        <a href="katie-kakes.html"><img src="img/thumb/katie_thumb.png" alt="" /></a>
+                    </li>
+                    <li class="mix web">
+                        <a href="ui-toolkit.html"><img src="img/thumb/toolkit_thumb.jpg" alt="" /></a>
+                    </li>
+                </ul>
             </div>
         </div>
-
     </div>
 
-    @@include('./partials/footer.html')
+</div>
+
+@@include('./partials/footer.html')

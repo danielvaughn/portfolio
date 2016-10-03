@@ -1,43 +1,31 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Daniel Vaughn - Studio Luminoso</title>
-    <meta name='viewport' content='width=device-width'>
-    <style type="text/css">
-        .header-container {
-            background: #000 url('img/site/bg_optim.jpg') no-repeat center center;
-            background-attachment: fixed;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-</head>
+@@include('./partials/header.html', {
+    "name": "Daniel Vaughn - Studio Luminoso"
+})
 
-<body>
-    <div id="wrapper">
-        <div class="header-container">
-            <header>
-                <nav role='navigation'>
-                    <h1><a href="index.html">Daniel Vaughn</a></h1>
-                    <ul>
-                        <li><a href="info.html">Info</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <p>Studio Luminoso Photography</p>
-        </div>
-        <div class="content-wrapper">
-            <div class="content-work">
-                <p>Christy McMahon owns a successful photography business in Mississippi. She needed an updated site that worked on all of her client's devices. The site is in beta testing and will be launched soon.</p>
-                <div class="row">
-                    <img src="img/sl/sl_homepage.jpg">
-                </div>
-                <div class="row">
-                    <img src="img/sl/sl_pricing.png">
-                </div>
+<div id="wrapper">
+    <div class="header-container">
+        <header>
+            <nav role='navigation'>
+                <h1><a href="index.html">Daniel Vaughn</a></h1>
+                <ul>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>Studio Luminoso Photography</p>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-work">
+            <p>Christy McMahon owns a successful photography business in Mississippi. She needed an updated site that worked on all of her client's devices. The site is in beta testing and will be launched soon.</p>
+            <div class="row">
+                <img src="img/sl/sl_homepage.jpg">
+            </div>
+            <div class="row">
+                <img src="img/sl/sl_pricing.png">
             </div>
         </div>
     </div>
+</div>
 
-    @@include('./partials/footer.html')
+@@include('./partials/footer.html')

@@ -1,38 +1,27 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Daniel Vaughn - Katie Kakes</title>
-    <meta name='viewport' content='width=device-width'>
-    <style type="text/css">
-        .header-container {
-            background: #000 url('img/site/bg_optim.jpg') no-repeat center center;
-            background-attachment: fixed;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-</head>
+@@include('./partials/header.html', {
+    "name": "Daniel Vaughn - Katie Kakes"
+})
 
-<body>
-    <div id="wrapper">
-        <div class="header-container">
-            <header>
-                <nav role='navigation'>
-                    <h1><a href="index.html">Daniel Vaughn</a></h1>
-                    <ul>
-                        <li><a href="info.html">Info</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <p>Katie Kakes</p>
-        </div>
-        <div class="content-wrapper">
-            <div class="content-work">
-                <p>Katie Kakes is run by Katie Eves, a professional pastry chef in South Florida. She hired me to design her business card.</p>
-                <div class="group"><img class="half" src="img/katie/kkf.jpg"><img class="half" src="img/katie/kkb.jpg"></div>
-            </div>
+
+<div id="wrapper">
+    <div class="header-container">
+        <header>
+            <nav role='navigation'>
+                <h1><a href="index.html">Daniel Vaughn</a></h1>
+                <ul>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>Katie Kakes</p>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-work">
+            <p>Katie Kakes is run by Katie Eves, a professional pastry chef in South Florida. She hired me to design her business card.</p>
+            <div class="group"><img class="half" src="img/katie/kkf.jpg"><img class="half" src="img/katie/kkb.jpg"></div>
         </div>
     </div>
+</div>
 
-    @@include('./partials/footer.html')
+@@include('./partials/footer.html')

@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Daniel Vaughn - Info</title>
-    <meta name='viewport' content='width=device-width'>
-    <style type="text/css">
-        .header-container {
-            background: #000 url('img/site/river_bg.jpg') no-repeat center center;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-</head>
+    @@include('./partials/header.html', {
+        "name": "Daniel Vaughn - Info"
+    })
 
-<body>
     <div id="wrapper">
-        <div class="header-container">
+        <div class="header-container info">
             <header>
                 <nav role='navigation'>
                     <h1><a href="index.html">Daniel Vaughn</a></h1>
@@ -25,6 +14,7 @@
                 </nav>
             </header>
         </div>
+
         <div class="content-wrapper">
             <div class="content-about">
                 <p>I've been designing for about five years now, and writing code for three.</p>

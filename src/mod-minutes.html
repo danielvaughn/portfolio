@@ -1,41 +1,29 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Daniel Vaughn - Mod Minutes</title>
-    <meta name='viewport' content='width=device-width'>
-    <style type="text/css">
-        .header-container {
-            background: #000 url('img/site/bg_optim.jpg') no-repeat center center;
-            background-attachment: fixed;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-</head>
+@@include('./partials/header.html', {
+    "name": "Daniel Vaughn - Mod Minutes"
+})
 
-<body>
-    <div id="wrapper">
-        <div class="header-container">
-            <header>
-                <nav role='navigation'>
-                    <h1><a href="index.html">Daniel Vaughn</a></h1>
-                    <ul>
-                        <li><a href="info.html">Info</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <p>Mod Minutes</p>
-        </div>
-        <div class="content-wrapper">
-            <div class="content-work">
-                <p>Mod Minutes is a time-tracking Chrome extension that I built for my moderation team.</p>
-                <p>If you're on Chrome, click <a href="mod-minutes/timer.html">here</a> to see a live demo, or read about <a href="http://danielvaughn.roon.io/mod-minutes">my process</a>.</p>
-                <div class="group"><img src="img/mm/mm_sketch.JPG"></div>
-                <div class="group"><img src="img/mm/mm.png"><img src="img/mm/mm_playing.png"></div>
-                <div class="group"><img src="img/mm/mm_stats.png"><img src="img/mm/mm_overlay.png"></div>
-            </div>
+<div id="wrapper">
+    <div class="header-container">
+        <header>
+            <nav role='navigation'>
+                <h1><a href="index.html">Daniel Vaughn</a></h1>
+                <ul>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>Mod Minutes</p>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-work">
+            <p>Mod Minutes is a time-tracking Chrome extension that I built for my moderation team.</p>
+            <p>If you're on Chrome, click <a href="mod-minutes/timer.html">here</a> to see a live demo, or read about <a href="http://danielvaughn.roon.io/mod-minutes">my process</a>.</p>
+            <div class="group"><img src="img/mm/mm_sketch.JPG"></div>
+            <div class="group"><img src="img/mm/mm.png"><img src="img/mm/mm_playing.png"></div>
+            <div class="group"><img src="img/mm/mm_stats.png"><img src="img/mm/mm_overlay.png"></div>
         </div>
     </div>
+</div>
 
-    @@include('./partials/footer.html')
+@@include('./partials/footer.html')

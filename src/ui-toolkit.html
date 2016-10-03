@@ -1,39 +1,27 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Daniel Vaughn - UI Toolkit</title>
-    <meta name='viewport' content='width=device-width'>
-    <style type="text/css">
-        .header-container {
-            background: #000 url('img/site/bg_optim.jpg') no-repeat center center;
-            background-attachment: fixed;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-</head>
+@@include('./partials/header.html', {
+    "name": "Daniel Vaughn - UI Toolkit"
+})
 
-<body>
-    <div id="wrapper">
-        <div class="header-container">
-            <header>
-                <nav role='navigation'>
-                    <h1><a href="index.html">Daniel Vaughn</a></h1>
-                    <ul>
-                        <li><a href="info.html">Info</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <p>UI Toolkit</p>
-        </div>
-        <div class="content-wrapper">
-            <div class="content-work">
-                <p>The UI Toolkit is a simple web project I am working on with my friend <a href="http://jonyablonski.com/" target="_blank">Jon</a>. It is a library of visual styles for web designers, sorted by properties with sandboxed CSS readily available for copying.</p>
-                <p>Click <a href="toolkit/rules.html">here</a> to see a live demo.</p>
-                <div class="row"><img class="mobile-shot" src="img/toolkit/toolkit_mobile.png"><img class="desk-shot" src="img/toolkit/toolkit_desktop.png"></div>
-            </div>
+<div id="wrapper">
+    <div class="header-container">
+        <header>
+            <nav role='navigation'>
+                <h1><a href="index.html">Daniel Vaughn</a></h1>
+                <ul>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>UI Toolkit</p>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-work">
+            <p>The UI Toolkit is a simple web project I am working on with my friend <a href="http://jonyablonski.com/" target="_blank">Jon</a>. It is a library of visual styles for web designers, sorted by properties with sandboxed CSS readily available for copying.</p>
+            <p>Click <a href="toolkit/rules.html">here</a> to see a live demo.</p>
+            <div class="row"><img class="mobile-shot" src="img/toolkit/toolkit_mobile.png"><img class="desk-shot" src="img/toolkit/toolkit_desktop.png"></div>
         </div>
     </div>
+</div>
 
-    @@include('./partials/footer.html')
+@@include('./partials/footer.html')
