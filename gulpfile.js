@@ -11,7 +11,7 @@ var runSequence = require('run-sequence');
 
 gulp.task('connect', function () {
   connect.server({
-    root: './src/',
+    root: './srv/',
     port: 9000,
     livereload: true
   });
@@ -41,6 +41,11 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter('fail'));
 });
 
+gulp.task('copyfiles', function() {
+   gulp.src('./src/**/*')
+   .pipe(gulp.dest('./srv'));
+});
+
 // gulp.task('style', function() {
 //   return gulp.src('src/**/*.js')
 //     .pipe(jscs())
@@ -49,9 +54,9 @@ gulp.task('jshint', function() {
 // });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/js/*.js', ['jshint', 'javascript', 'style']);
-  gulp.watch(['./src/*.html'], ['html']);
-  gulp.watch(['./src/css/*.css'], ['css']);
+  gulp.watch('./src/js/*.js', ['jshint', 'javascript', 'copyfiles']);
+  gulp.watch(['./src/*.html'], ['html', 'copyfiles']);
+  gulp.watch(['./src/css/*.css'], ['css', 'copyfiles']);
 });
 
 // *** defailt task *** //
@@ -60,6 +65,7 @@ gulp.task('default', function() {
     ['jshint'],
     // ['style'],
     ['watch'],
+    ['copyfiles'],
     ['connect']
   );
 });
