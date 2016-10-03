@@ -14,7 +14,7 @@ var sass = require('gulp-sass');
 
 gulp.task('connect', function () {
   connect.server({
-    root: './srv/',
+    root: './.srv/',
     port: 9000,
     livereload: true
   });
@@ -45,9 +45,9 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('copyfiles', function() {
-   gulp.src('./src/mod-minutes/**/*').pipe(gulp.dest('./srv/mod-minutes'));
-   gulp.src('./src/img/**/*').pipe(gulp.dest('./srv/img'));
-   gulp.src('./src/js/**/*').pipe(gulp.dest('./srv/js'));
+   gulp.src('./src/mod-minutes/**/*').pipe(gulp.dest('./.srv/mod-minutes'));
+   gulp.src('./src/img/**/*').pipe(gulp.dest('./.srv/img'));
+   gulp.src('./src/js/**/*').pipe(gulp.dest('./.srv/js'));
 });
 
 gulp.task('fileinclude', function() {
@@ -56,7 +56,7 @@ gulp.task('fileinclude', function() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest('./srv'));
+    .pipe(gulp.dest('./.srv'));
 });
 
 gulp.task('watch', function() {
@@ -68,16 +68,16 @@ gulp.task('watch', function() {
 gulp.task('sass', function () {
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./srv/css'));
+    .pipe(gulp.dest('./.srv/css'));
 });
- 
+
 gulp.task('sass:watch', function () {
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 
 // *** default task *** //
 gulp.task('default', function() {
-  gulp.src('./srv', {read: false}).pipe(clean({force: true}));
+  gulp.src('./.srv', {read: false}).pipe(clean({force: true}));
 
   runSequence(
     ['jshint'],
