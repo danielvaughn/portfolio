@@ -10,6 +10,9 @@ body {
     font-family: 'Source Sans Pro',sans-serif;
     -webkit-font-smoothing: antialiased;
 }
+
+body.no-fouc { display: none; }
+
 ul { list-style: none }
 #wrapper { font-weight: 300 }
 .header-container {
