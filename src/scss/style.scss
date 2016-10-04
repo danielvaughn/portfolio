@@ -100,7 +100,7 @@ header {
 header nav ul li a,
 .content-work a {
     text-decoration: none;
-    color: #f46322;
+    color: $danielOrange;
     -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
     -ms-transition: all 150ms ease-in-out;
@@ -126,9 +126,9 @@ header nav ul li a:hover,
     margin: 0 auto;
 }
 
-.content p, .content-about p, .content-work p { color: #787878; }
+.content p, .content-about p, .content-work p { color: $mediumGray; }
 
-.content p a, .content-work p a { color: #f46322; }
+.content p a, .content-work p a { color: $danielOrange; }
 
 .content p a:hover, .content-work p a:hover { color: #f79b72; }
 
@@ -147,33 +147,31 @@ header nav ul li a:hover,
         width: 50%;
         border: 1px solid #323232;
         position: relative;
+
+        a {
+            display: block;
+            overflow: hidden;
+            -webkit-transition: all 250ms ease-in-out;
+            -moz-transition: all 250ms ease-in-out;
+            -ms-transition: all 250ms ease-in-out;
+            -o-transition: all 250ms ease-in-out;
+            transition: all 250ms ease-in-out;
+            opacity: .65;
+
+            &:hover {
+                -webkit-border-radius: 16px;
+                border-radius: 16px;
+                opacity: 1;
+            }
+
+            img { width: 100% }
+        }
     }
-
-    .mix:hover { }
-
-    .mix a {
-        display: block;
-        overflow: hidden;
-        -webkit-transition: all 250ms ease-in-out;
-        -moz-transition: all 250ms ease-in-out;
-        -ms-transition: all 250ms ease-in-out;
-        -o-transition: all 250ms ease-in-out;
-        transition: all 250ms ease-in-out;
-        opacity: .65;
-    }
-
-    .mix a:hover {
-        -webkit-border-radius: 16px;
-        border-radius: 16px;
-        opacity: 1;
-    }
-
-    .mix a img { width: 100% }
 }
 
 .filter {
     display: inline-block;
-    color: #787878;
+    color: $mediumGray;
     cursor: pointer;
     -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
@@ -181,13 +179,13 @@ header nav ul li a:hover,
     -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
 
-    &:hover { color: #f46322; }
+    &:hover { color: $danielOrange; }
 
     &:after { content: " /"; }
 
     &:last-of-type:after { content: ""; }
 
-    &:hover:after { color: #787878; }
+    &:hover:after { color: $mediumGray; }
 }
 
 .content-work {
@@ -198,7 +196,7 @@ header nav ul li a:hover,
 
     h3 {
         font-weight: 400;
-        color: #787878;
+        color: $mediumGray;
         margin-top: 30px;
         margin-bottom: 10px;
     }
@@ -247,29 +245,25 @@ header nav ul li a:hover,
 img.half { width: 45%; }
 
 footer {
-    background-color: #787878;
+    background-color: $mediumGray;
     text-align: center;
     margin-top: 3em;
 
     &.footer-home { margin-top: 0; }
 
     ul li a {
-        color: #dcdcdc;
+        color: $lightGray;
         text-decoration: none;
     }
 
     small {
-        background-color: #f46322;
+        background-color: $danielOrange;
         color: #fff;
         display: block;
     }
 }
 
-
-
 .work { padding: 2.25em 0; }
-
-
 
 .filter-list {
     margin-bottom: 1.25em;
@@ -300,7 +294,7 @@ footer {
 
 .content-about ul li span {
     color: #e6e6e6;
-    background-color: #f46322;
+    background-color: $danielOrange;
     padding: .25em .5em;
 }
 
