@@ -36,7 +36,7 @@ gulp.task('javascript', function () {
 });
 
 gulp.task('jshint', function() {
-    return gulp.src('./src/js/**/*.js')
+    return gulp.src(['./src/js/**/*.js', '!./src/js/vendor/**/*.js'])
         .pipe(jshint({
             esnext: true
         }))
