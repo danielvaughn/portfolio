@@ -1,3 +1,4 @@
+@import "helper";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic);
 
 *, :after, :before {
@@ -36,7 +37,7 @@ ul { list-style: none; }
 
     p {
         width: 100%;
-        max-width: 1128px;
+        max-width: $desktopWidth;
         position: absolute;
         bottom: 1.5em;
         padding: 0 20px;
@@ -52,11 +53,11 @@ header {
         width: 100%;
         margin: 0 auto;
         position: relative;
-        height: 44px;
-        max-width: 1128px;
+        height: $maxMobileButtonHeight;
+        max-width: $desktopWidth;
     }
 
-    nav h1 {
+    h1 {
         position: relative;
         float: left;
         font-size: 1em;
@@ -64,19 +65,19 @@ header {
         left: 1em;
         width: 2.2em;
         height: 37px;
-    }
 
-    nav h1 a {
-        color: transparent;
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        bottom: 4px;
-        left: 4px;
-        font-size: 0;
-        background-image: url(../img/site/logo_optim.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+        a {
+            color: transparent;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            bottom: 4px;
+            left: 4px;
+            font-size: 0;
+            background-image: url(../img/site/logo_optim.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
 
     nav ul {
@@ -92,7 +93,7 @@ header {
             margin-left: 20px;
         }
 
-        li a { line-height: 44px; }
+        li a { line-height: $maxMobileButtonHeight; }
     }
 }
 
@@ -121,7 +122,7 @@ header nav ul li a:hover,
 
 .content p, .content-about p, .filter-list, #grid, .content-work {
     width: 100%;
-    max-width: 1128px;
+    max-width: $desktopWidth;
     margin: 0 auto;
 }
 
@@ -287,7 +288,7 @@ footer {
 
 .content-about ul {
     width: 100%;
-    max-width: 1128px;
+    max-width: $desktopWidth;
     margin: 0 auto;
     list-style: none;
 }
@@ -373,9 +374,9 @@ footer small {
     DESKTOP STYLES
 *******/
 
-@media (min-width:1128px) {
+@media (min-width:$desktopWidth) {
 
-    #wrapper, footer { font-size: 44px; }
+    #wrapper, footer { font-size: $maxMobileButtonHeight; }
 
     .header-container {
         height: 501px;
@@ -384,7 +385,7 @@ footer small {
             position: relative;
             top: 270px;
             bottom: 0;
-            padding: 0 44px;
+            padding: 0 $maxMobileButtonHeight;
         }
     }
 
@@ -393,42 +394,42 @@ footer small {
 
         nav h1 {
             top: 22px;
-            left: 44px;
+            left: $maxMobileButtonHeight;
             width: 67px;
             height: 57px;
         }
 
-        nav ul { right: 44px; }
+        nav ul { right: $maxMobileButtonHeight; }
 
-        nav ul li { margin-left: 44px; }
+        nav ul li { margin-left: $maxMobileButtonHeight; }
 
         nav ul li a { line-height: 101px; }
     }
 
-    .content-wrapper { font-size: 44px; }
+    .content-wrapper { font-size: $maxMobileButtonHeight; }
 
     .content,
     .content-about,
     .content-work { padding-top: 501px; }
 
     .content p {
-        padding: 120px 44px;
+        padding: 120px $maxMobileButtonHeight;
 
-        &:first-of-type { padding: 200px 44px; }
+        &:first-of-type { padding: 200px $maxMobileButtonHeight; }
     }
 
     .content-about {
-        p { padding: 2em 44px 0; }
-        ul li { padding: 0 44px; }
+        p { padding: 2em $maxMobileButtonHeight 0; }
+        ul li { padding: 0 $maxMobileButtonHeight; }
     }
 
     .content-work {
-        padding-left: 44px;
-        padding-right: 44px;
+        padding-left: $maxMobileButtonHeight;
+        padding-right: $maxMobileButtonHeight;
 
         p {
-            margin-top: 44px;
-            margin-bottom: 44px;
+            margin-top: $maxMobileButtonHeight;
+            margin-bottom: $maxMobileButtonHeight;
             padding-top: 0px;
             padding-bottom: 0px;
 
@@ -445,10 +446,10 @@ footer small {
 
     .group img { margin-right: 0.25em; }
 
-    .filter-list { padding-left: 44px; }
+    .filter-list { padding-left: $maxMobileButtonHeight; }
 
     #grid {
-        padding: 0 44px;
+        padding: 0 $maxMobileButtonHeight;
 
         .mix { width: 33.333%; }
     }
