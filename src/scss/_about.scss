@@ -1,39 +1,59 @@
 @import "helper";
 
+.info-page .header-container { background-image: url('../img/site/river_bg.jpg'); }
+
 .content-about {
     ul {
         width: 100%;
         max-width: $desktop_width;
-        margin: 0 auto;
+        margin: 0px auto;
         list-style: none;
+    }
 
-        li {
-            padding: 0 20px;
-            margin: 2em auto;
+    li {
+        padding: 0px $mobile_horizontal_padding $vertical_one;
 
-            span {
-                color: #e6e6e6;
-                background-color: $daniel_orange;
-                padding: .25em .5em;
-            }
+        span {
+            color: $light_gray;
+            background-color: $daniel_orange;
+            line-height: $vertical_one;
+            position: absolute;
+            padding: 0px 10px;
+            font-size: $small_font_size;
+        }
 
-            p { padding: .5em 0 0; }
+        p {
+            padding: $vertical_one 0px 0px;
+            line-height: $vertical_one;
         }
     }
 }
 
-
 @media (min-width:$tablet_width) {
 
-    .content-about { padding-top: 350px; }
+    .content-about {
+        p.content-description { line-height: $vertical_two; }
+
+        li {
+            padding: 0px $tablet_horizontal_padding 42px;
+
+            span {
+                line-height: $vertical_one;
+                font-size: $base_font_size;
+            }
+
+            p {
+                padding-top: $tablet_font_size;
+                line-height: 1.2;
+            }
+        }
+    }
 
 }
 
 @media (min-width:$desktop_width) {
-
     .content-about {
         p { padding: 2em $vertical_two 0; }
         ul li { padding: 0 $vertical_two; }
     }
-
 }
