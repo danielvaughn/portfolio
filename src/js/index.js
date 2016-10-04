@@ -1,6 +1,8 @@
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
 
     document.body.classList.remove('no-fouc');
+
+    baseliner = new Baseliner(25);
 
 });

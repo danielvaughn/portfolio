@@ -1,0 +1,39 @@
+@import "helper";
+
+.content-about {
+    ul {
+        width: 100%;
+        max-width: $desktop_width;
+        margin: 0 auto;
+        list-style: none;
+
+        li {
+            padding: 0 20px;
+            margin: 2em auto;
+
+            span {
+                color: #e6e6e6;
+                background-color: $daniel_orange;
+                padding: .25em .5em;
+            }
+
+            p { padding: .5em 0 0; }
+        }
+    }
+}
+
+
+@media (min-width:$tablet_width) {
+
+    .content-about { padding-top: 350px; }
+
+}
+
+@media (min-width:$desktop_width) {
+
+    .content-about {
+        p { padding: 2em $vertical_two 0; }
+        ul li { padding: 0 $vertical_two; }
+    }
+
+}

@@ -1,6 +1,51 @@
 
-$desktopWidth: 1128px;
-$maxMobileButtonHeight: 44px;
-$danielOrange: #f46322;
-$mediumGray: #787878;
-$lightGray: #dcdcdc;
+$tablet_width: 600px;
+$desktop_width: 1020px;
+
+$vertical_one: 25px;
+$vertical_two: 50px;
+$vertical_three: 75px;
+$vertical_four: 100px;
+
+$base_font_size: 20px;
+$tablet_font_size: 33px;
+$desktop_font_size: 44px;
+
+$mobile_horizontal_padding: $base_font_size;
+$tablet_horizontal_padding: $tablet_font_size;
+$desktop_horizontal_padding: $desktop_font_size;
+
+$daniel_orange: #f46322;
+$daniel_orange_light: #f79b72;
+
+$dark_gray: #232323;
+$medium_gray: #787878;
+$light_gray: #dcdcdc;
+$white: #ffffff;
+
+
+%link {
+    text-decoration: none;
+    color: $daniel_orange;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+%image_replacement {
+    color: transparent;
+    font-size: 0;
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

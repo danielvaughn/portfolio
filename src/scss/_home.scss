@@ -1,0 +1,113 @@
+@import "helper";
+
+.content-home {
+    p.content-description { padding: $vertical_two 20px; }
+}
+
+.filter-list {
+    width: 100%;
+    max-width: $desktop_width;
+    margin: 0 auto;
+    padding-left: $mobile_horizontal_padding;
+}
+
+.filter {
+    display: inline-block;
+    color: $medium_gray;
+    cursor: pointer;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+
+    &:hover { color: $daniel_orange; }
+
+    &:after { content: " /"; }
+
+    &:last-of-type:after { content: ""; }
+
+    &:hover:after { color: $medium_gray; }
+}
+
+#grid {
+    width: 100%;
+    max-width: $desktop_width;
+    margin: 0 auto;
+}
+
+#grid {
+    font-size: .1px;
+    padding: 0 20px;
+
+    .mix {
+        opacity: 0;
+        display: none;
+        width: 50%;
+        border: 1px solid #323232;
+        position: relative;
+
+        a {
+            display: block;
+            overflow: hidden;
+            -webkit-transition: all 250ms ease-in-out;
+            -moz-transition: all 250ms ease-in-out;
+            -ms-transition: all 250ms ease-in-out;
+            -o-transition: all 250ms ease-in-out;
+            transition: all 250ms ease-in-out;
+            opacity: .65;
+
+            &:hover {
+                -webkit-border-radius: 16px;
+                border-radius: 16px;
+                opacity: 1;
+            }
+
+            img { width: 100% }
+        }
+    }
+}
+
+.work {
+    background-color: #1e1e1e;
+    width: 100%;
+    padding: 37px 0px;
+}
+
+
+@media (min-width:$tablet_width) {
+    .content-home {
+        p.content-description {
+            padding: $vertical_three 33px;
+            line-height: $vertical_two;
+        }
+    }
+
+    .work { padding: $vertical_one 0px; }
+
+    .filter-list {
+        padding-left: $tablet_horizontal_padding;
+        line-height: $vertical_two;
+    }
+
+    footer ul {
+        padding: $vertical_two 0px;
+
+        li { line-height: $vertical_two; }
+    }
+}
+
+@media (min-width:$desktop_width) {
+
+    .content-home {
+        p.content-description { padding: ($vertical_one * 5) $desktop_horizontal_padding; }
+    }
+
+    .filter-list { padding-left: $vertical_two; }
+
+    #grid {
+        padding: 0 $vertical_two;
+
+        .mix { width: 33.333%; }
+    }
+}
