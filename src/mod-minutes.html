@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - Mod Minutes"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>Mod Minutes</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "Mod Minutes"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>Mod Minutes is a time-tracking Chrome extension that I built for my moderation team.</p>

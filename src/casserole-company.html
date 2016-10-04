@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - Casserole Company"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>The Casserole Company</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "The Casserole Company"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>The Casserole Company is a small business in Michigan that delivers healthy, ready-cooked meals in a unique and convenient way. I am currently developing their logo.</p>

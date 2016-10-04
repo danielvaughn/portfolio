@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - UI Toolkit"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>UI Toolkit</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "UI Toolkit"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>The UI Toolkit is a simple web project I am working on with my friend <a href="http://jonyablonski.com/" target="_blank">Jon</a>. It is a library of visual styles for web designers, sorted by properties with sandboxed CSS readily available for copying.</p>

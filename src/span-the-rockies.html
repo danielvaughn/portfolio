@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - SPAN The Rockies"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>SPAN The Rockies 2012</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "SPAN The Rockies 2012"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>SPAN (Safehouse Progressive Alliance for Non-violence) is a non-profit center in Boulder that provides a safe haven for victims of domestic assault. In 2012 they hired me to redesign their annual cycling tour. While I completed their logo and peripherals, they decided not to complete the redesign of the tour's website.</p>

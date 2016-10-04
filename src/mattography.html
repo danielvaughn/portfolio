@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - Mattography"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>Mattography</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "Mattography"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>Mattography is the business name for photographer Matt Copeland, a wedding photographer in rural Tennessee. He hired me to produce a new logo, as well as several promotional items.</p>

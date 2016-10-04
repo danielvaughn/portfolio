@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - Spectra Autism Center"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>Spectra Autism Center</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "Spectra Autism Center"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>Spectra is an organization in Lafayette, CO that provides services for families and individuals on the Autism Spectrum and other Neurodevelopmental Disorders. I was hired to redesign their logo.</p>

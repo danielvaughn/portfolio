@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - Assemblies of Yahweh"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>Assemblies of Yahweh</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "Assemblies of Yahweh"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>Assemblies of Yahweh is a religious organization in Bethel, Pennsylvania. Their site was over ten years old, so they needed a fresh makeover. Click <a href="http://assembliesofyahweh.com">here</a> to visit the site.</p>

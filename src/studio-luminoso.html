@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn - Studio Luminoso"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>Studio Luminoso Photography</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "Studio Luminoso Photography"
+    })
+
     <div class="content-wrapper">
         <div class="content-work">
             <p>Christy McMahon owns a successful photography business in Mississippi. She needed an updated site that worked on all of her client's devices. The site is in beta testing and will be launched soon.</p>

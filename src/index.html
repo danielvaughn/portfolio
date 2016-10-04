@@ -1,20 +1,14 @@
 
-@@include('./partials/header.html', {
+@@include('./partials/head.html', {
     "name": "Daniel Vaughn Design and Development"
 })
 
 <div id="wrapper">
-    <div class="header-container">
-        <header>
-            <nav role='navigation'>
-                <h1><a href="index.html">Daniel Vaughn</a></h1>
-                <ul>
-                    <li><a href="info.html">Info</a></li>
-                </ul>
-            </nav>
-        </header>
-        <p>My name is Daniel Vaughn. I am a developer, designer, &amp; artist living in New York City.</p>
-    </div>
+
+    @@include('./partials/page-header.html', {
+        "description": "My name is Daniel Vaughn. I am a developer, designer, &amp; artist living in New York City."
+    })
+
     <div class="content-wrapper">
         <div class="content">
             <p>Learn more about <a href="info.html">me</a>, view some of my <a href="http://codepen.io/danielvaughn" target="_blank">code snippets</a>, or scroll on to see my work.</p>
