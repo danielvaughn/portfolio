@@ -8,9 +8,9 @@ $vertical_three: 75px;
 $vertical_four: 100px;
 
 $small_font_size: 16px;
-$base_font_size: 20px;
-$tablet_font_size: 33px;
-$desktop_font_size: 44px;
+$base_font_size: 16px;
+$tablet_font_size: $base_font_size * 1.6;
+$desktop_font_size: $base_font_size * 2.2;
 
 $mobile_horizontal_padding: $base_font_size;
 $tablet_horizontal_padding: $tablet_font_size;
@@ -20,7 +20,7 @@ $daniel_orange: #f46322;
 $daniel_orange_light: #f79b72;
 
 $dark_gray: #232323;
-$medium_gray: #787878;
+$medium_gray: #4c4c4c;
 $light_gray: #dcdcdc;
 $white: #ffffff;
 
