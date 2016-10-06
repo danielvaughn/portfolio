@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // baseliner = new Baseliner(25);
 
-    $('#creative-work').mixitup();
+    $('#creative-work').mixItUp();
 
 });

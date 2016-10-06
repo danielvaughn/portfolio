@@ -1,6 +1,10 @@
 @import "helper";
 
 
+/***
+    CONTENT
+***/
+
 .content-work {
     max-width: $desktop_width;
     padding-left: 20px;
@@ -36,6 +40,9 @@
     }
 }
 
+.gallery-row { margin: $vertical_one auto; }
+
+
 /***
     MISC
 ***/
@@ -52,6 +59,10 @@ img.half { width: 45%; }
 }
 
 
+/***
+    TABLET SIZE
+***/
+
 @media (min-width:$tablet_width) {
 
     .content-work { padding-top: 350px; }
@@ -62,7 +73,13 @@ img.half { width: 45%; }
         p:last-of-type { padding-bottom: 30px; }
     }
 
+    .gallery-row { margin-top: $vertical_two; }
 }
+
+
+/***
+    DESKTOP SIZES
+***/
 
 @media (min-width:$desktop_width) {
 
@@ -87,4 +104,5 @@ img.half { width: 45%; }
 
     .group img { margin-right: 0.25em; }
 
+    .gallery-row { padding: 0px $desktop_horizontal_padding; }
 }

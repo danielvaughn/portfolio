@@ -39,7 +39,6 @@
     margin: 0 auto;
 
     .mix {
-        opacity: 0;
         display: none;
         width: 50%;
         border: 1px solid #323232;
@@ -70,11 +69,7 @@
         }
     }
 
-    .work { padding: $vertical_one 0px; }
-
     .filter-list-header { line-height: $vertical_two; }
-
-
 }
 
 @media (min-width:$desktop_width) {
@@ -82,8 +77,6 @@
     .content-home {
         p.content-description { padding: ($vertical_one * 5) $desktop_horizontal_padding; }
     }
-
-    // .work { padding: 2.25em 0; }
 
     .filter-list-header {
         padding-left: $desktop_horizontal_padding;
