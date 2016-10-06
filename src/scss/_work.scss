@@ -36,7 +36,20 @@
     }
 }
 
+/***
+    MISC
+***/
+
 img.half { width: 45%; }
+
+.group img {
+    display: block;
+    float: left;
+    width: auto;
+    max-width: 100%;
+    margin-right: .25em;
+    border: 1px solid #ddd;
+}
 
 
 @media (min-width:$tablet_width) {
@@ -71,5 +84,7 @@ img.half { width: 45%; }
             margin-bottom: 10px;
         }
     }
+
+    .group img { margin-right: 0.25em; }
 
 }

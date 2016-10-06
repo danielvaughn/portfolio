@@ -11,7 +11,7 @@ html { background-color: $dark_gray; }
 
 body {
     background-color: $white;
-    transition: opacity 50ms ease-in-out;
+    transition: opacity 20ms ease-in-out;
     font-family: 'Source Sans Pro',sans-serif;
     font-size: $base_font_size;
     font-weight: 300;
@@ -25,7 +25,7 @@ ul { list-style: none; }
 
 
 /***
-    header
+    HEADER
 ***/
 
 .page-header {
@@ -95,20 +95,22 @@ ul { list-style: none; }
     CONTENT
 ***/
 
-.content {
-    margin: 0 auto;
+[class*="page-content--section"] {
+    margin: 0px auto;
+    padding: $vertical_one $mobile_horizontal_padding;
+}
 
-    p {
-        max-width: $desktop_width;
-        margin: 0 auto;
-        padding: $vertical_one $mobile_horizontal_padding;
-        color: $medium_gray;
+.page-content--item {
+    max-width: $desktop_width;
+    margin-bottom: $base_font_size;
+    color: $medium_gray;
 
-        a {
-            color: $daniel_orange;
+    &:last-of-type { margin-bottom: 0px; }
 
-            &:hover { color: $daniel_orange_light; }
-        }
+    a {
+        color: $daniel_orange;
+
+        &:hover { color: $daniel_orange_light; }
     }
 }
 
@@ -133,44 +135,29 @@ ul { list-style: none; }
 
 .desk-shot { width: 71%; }
 
-.group img {
-    display: block;
-    float: left;
-    width: auto;
-    max-width: 100%;
-    margin-right: .25em;
-    border: 1px solid #ddd;
-}
-
-footer {
+.page-footer {
     background-color: $medium_dark_gray;
     text-align: center;
-    margin-top: 3em;
-    font-size: 1.25em;
+    font-size: $base_font_size * 1.25;
 
-    &.footer-home { margin-top: 0; }
-
-    ul {
-        padding: 35px 0;
-
-        li a {
-            color: $light_gray;
-            text-decoration: none;
-
-            &:hover { color: $white; }
-        }
-    }
-
-    small {
-        background-color: $daniel_orange;
-        color: $white;
-        font-weight: 600;
-        font-size: 14px;
-        display: block;
-        line-height: $vertical_two;
-    }
+    ul { padding: $tablet_horizontal_padding 0px; }
 }
 
+.page-footer--item a {
+    color: $light_gray;
+    text-decoration: none;
+
+    &:hover { color: $white; }
+}
+
+.page-footer--copyright {
+    background-color: $daniel_orange;
+    color: $white;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    line-height: $vertical_two;
+}
 
 
 
@@ -180,7 +167,7 @@ footer {
 
 @media (min-width:$tablet_width) {
 
-    #wrapper, footer { font-size: $tablet_font_size; }
+    #wrapper, .page-footer { font-size: $tablet_font_size; }
 
     .page-header {
         height: 375px;
@@ -204,15 +191,21 @@ footer {
         .page-header--item_info { right: $tablet_horizontal_padding; }
     }
 
-    .content-wrapper { font-size: $tablet_font_size; }
+    // .page-content { font-size: $tablet_font_size; }
 
-    .content {
-        p { padding: $vertical_three $tablet_horizontal_padding; }
+    [class*="page-content--section"] { padding: $vertical_three $tablet_horizontal_padding; }
+
+    [class*="page-content--item"] {
+        margin-bottom: $tablet_font_size;
+
+        &:last-of-type { margin-bottom: 0px; }
     }
 
     .group img { margin-right: 0em; }
 
-    footer small {
+    .page-footer ul { padding: $vertical_two 0px; }
+
+    .page-footer--copyright {
         font-size: 0.5em;
         padding: 0.5em 0;
     }
@@ -225,7 +218,7 @@ footer {
 
 @media (min-width:$desktop_width) {
 
-    #wrapper, footer { font-size: $desktop_font_size; }
+    #wrapper, .page-footer { font-size: $desktop_font_size; }
 
     .page-header {
         height: 500px;
@@ -241,35 +234,20 @@ footer {
         .page-header--item_info { right: $desktop_horizontal_padding; }
     }
 
-    .content-wrapper { font-size: $vertical_two; }
-
-    .content {
-        p {
-            padding: 120px $desktop_horizontal_padding;
-        }
+    .page-content--item {
+        padding: 0px $desktop_horizontal_padding;
+        margin: 0px auto $desktop_font_size;
     }
 
-    .work { padding: 2.25em 0; }
+    .page-footer ul { padding: 30px 0px; }
 
-    .group img { margin-right: 0.25em; }
+    .page-footer--item a {
+        -webkit-transition: all 150ms ease-in-out;
+        -moz-transition: all 150ms ease-in-out;
+        -ms-transition: all 150ms ease-in-out;
+        -o-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
 
-    footer {
-        margin-top: 5em;
-
-        &.footer-home { margin-top: 0; }
-
-        ul {
-            padding: 30px 0;
-
-            li a {
-                -webkit-transition: all 150ms ease-in-out;
-                -moz-transition: all 150ms ease-in-out;
-                -ms-transition: all 150ms ease-in-out;
-                -o-transition: all 150ms ease-in-out;
-                transition: all 150ms ease-in-out;
-
-                &:hover { color: #fff; }
-            }
-        }
+        &:hover { color: $white; }
     }
 }
