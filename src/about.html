@@ -1,0 +1,90 @@
+
+    @@include('./partials/head.html', {
+        "name": "Daniel Vaughn - Info"
+    })
+
+    <div id="wrapper" class="info-page">
+
+        @@include('./partials/page-header.html', {
+            "description": ""
+        })
+
+        <main class="page-content">
+            <section class="page-content--section_about">
+                <p class="page-content--item">
+                    Originally an artist and designer, I began my career transition towards software development in 2012. My background gave me a solid foundation in design thinking, and I try to carry that attention to detail to my code. Below is a selection of my most recent and notable work.
+                </p>
+            </section>
+
+            <section class="page-content--section_about">
+
+                <div class="page-content--item">
+                    <h1 class="page-content--item-header">
+                        Multi-Broker Aggregation API
+                        <span>TradeIt, Inc</span>
+                    </h1>
+
+                    <p>The TradeIt product lets app developers, publishers, and ETF companies integrate any major US retail broker’s functionality into any app, site, or platform.</p>
+                    <p>I helped build and maintain a java-based web API that connects with most major US retail brokers to handle authentication, order management and portfolio management.</p>
+                    <p>You can read about the API on their <a href="https://www.trade.it/documentation/api">documentation page</a></p>
+
+                </div>
+
+            </section>
+
+            <section class="page-content--section_about">
+
+                <div class="page-content--item">
+                    <h1 class="page-content--item-header">
+                        Client Trading Widget Library
+                        <span>TradeIt, Inc</span>
+                    </h1>
+
+                    <p>In addition to providing an API, TradeIt allows publishers to integrate order and portfolio management functionality directly onto their site using pre-built widgets.</p>
+
+                    <p>I helped build and maintain both the widgets and the client library used to connect to the TradeIt API.</p>
+
+                    <p>To try it out, click one of the buttons below, select the 'Dummy' broker and use the following credentials:</p>
+
+                    <p>
+                        Username: dummy
+                        <br />
+                        Password: pass
+                        <br />
+                        <tradeit widget="buy-sell-stacked" stock-symbol="IBM" company-name="International Business Machines Corp" />
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="page-content--section_about">
+
+                <div class="page-content--item">
+                    <h1 class="page-content--item-header">
+                        Client Trading iOS Library
+                        <span>TradeIt, Inc</span>
+                    </h1>
+
+                    <p>I built and maintained TradeIt's iOS SDK, which allows publishers to integrate order and portfolio management functionality directly into their app with only a few lines of code.</p>
+
+                    <p>The SDK is currently integrated into several apps, including <a target="_blank" href="https://rubicoin.com/">Rubicoin</a>, <a target="_blank" href="https://itunes.apple.com/us/app/stock-master-stocks-market/id591644846">StockMaster</a>, and <a target="_blank" href="https://itunes.apple.com/us/app/stocks-live-portfolio-manager/id473206441">StocksLive</a>.</p>
+
+                    <p>The library is now open source. To see the code, click <a href="https://github.com/tradingticket/TradeItIosTicketSDK">here</a></p>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script type="text/javascript">
+        (function(t,r,a,d,e,it){
+            r.createElement(d); t[d+'Pub'] = e;
+            it=r.createElement(a);d=r.getElementsByTagName(a)[0];
+            it.src='https://qa.tradingticket.com/widget/scripts/tradeit-inject.js';
+            d.parentNode.insertBefore(it,d);
+        }(window,document,'script','tradeit','publisherdefault'));
+    </script>
+
+    @@include('./partials/footer.html')

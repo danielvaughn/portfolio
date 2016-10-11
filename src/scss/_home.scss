@@ -5,8 +5,6 @@
     CONTENT
 ***/
 
-.page-content--section_work { background-color: #1e1e1e; }
-
 .filter-list-header {
     width: 100%;
     max-width: $desktop_width;
@@ -61,26 +59,14 @@
     }
 }
 
-@media (min-width:$tablet_width) {
-    .content-home {
-        p.content-description {
-            padding: $vertical_three 33px;
-            line-height: $vertical_two;
-        }
-    }
+#creative-work { min-height: 600px; }
 
+@media (min-width:$tablet_width) {
     .filter-list-header { line-height: $vertical_two; }
 }
 
 @media (min-width:$desktop_width) {
-
-    .content-home {
-        p.content-description { padding: ($vertical_one * 5) $desktop_horizontal_padding; }
-    }
-
-    .filter-list-header {
-        padding-left: $desktop_horizontal_padding;
-    }
+    .filter-list-header { padding-left: $desktop_horizontal_padding; }
 
     .filter-list-content {
         padding: 0px $desktop_horizontal_padding;

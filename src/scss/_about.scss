@@ -1,59 +1,49 @@
 @import "helper";
 
-.info-page .page-header { background-image: url('../img/site/river_bg.jpg'); }
+.info-page {
+    margin-bottom: 3em;
 
-.content-about {
-    ul {
-        width: 100%;
-        max-width: $desktop_width;
-        margin: 0px auto;
-        list-style: none;
+    .page-header { background-image: url('../img/site/river_bg.jpg'); }
+}
+
+.page-content--section_about {
+    padding-bottom: 0px;
+
+    p { margin-bottom: 1em; }
+
+    a { font-weight: 400; }
+}
+
+.page-content--item-header {
+    font-size: $base_font_size;
+    color: $dark_gray;
+    padding-bottom: 1em;
+
+    &:first-letter {
+        background-color: $daniel_orange;
+        color: $white;
+        font-size: 1.2em;
+        margin-right: 2px;
+        padding: 2px;
     }
 
-    li {
-        padding: 0px $mobile_horizontal_padding $vertical_one;
-
-        span {
-            color: $light_gray;
-            background-color: $daniel_orange;
-            line-height: $vertical_one;
-            position: absolute;
-            padding: 0px 10px;
-            font-size: $small_font_size;
-        }
-
-        p {
-            padding: $vertical_one 0px 0px;
-            line-height: $vertical_one;
-        }
+    span {
+        display: inline-block;
+        margin-left: 22px;
+        font-size: 0.8em;
+        color: $medium_gray;
     }
 }
 
 @media (min-width:$tablet_width) {
 
-    .content-about {
-        p.content-description { line-height: $vertical_two; }
-
-        li {
-            padding: 0px $tablet_horizontal_padding 42px;
-
-            span {
-                line-height: $vertical_one;
-                font-size: $base_font_size;
-            }
-
-            p {
-                padding-top: $tablet_font_size;
-                line-height: 1.2;
-            }
-        }
+    .page-content--item-header {
+        font-size: $tablet_font_size;
     }
 
 }
 
 @media (min-width:$desktop_width) {
-    .content-about {
-        p { padding: 2em $vertical_two 0; }
-        ul li { padding: 0 $vertical_two; }
-    }
+
+
 }
