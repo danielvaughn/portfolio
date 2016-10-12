@@ -7,7 +7,21 @@
 
 .page-content--section_work { background-color: #1e1e1e; }
 
-.gallery-row { margin: $vertical_one auto; }
+.gallery-row {
+    margin: $vertical_one auto;
+
+    [class*="col-"] {
+        margin-bottom: $vertical_one;
+    }
+
+    img {
+        display: block;
+        float: left;
+        max-width: 100%;
+
+        &:last-of-type { float: right; }
+    }
+}
 
 
 /***

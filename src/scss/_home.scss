@@ -61,8 +61,61 @@
 
 #creative-work { min-height: 600px; }
 
+
+.page-content--section_skills {
+    background-color: #1e1e1e;
+
+    .content-header { margin-bottom: $vertical_three; }
+
+    .content-header--title {
+        color: $light_gray;
+        margin-bottom: 10px;
+    }
+
+    .content-header--summary {
+        color: $medium_gray;
+        padding: 6px 0px $vertical_one;
+        border-bottom: 1px solid mix($daniel_orange, #1e1e1e);
+    }
+}
+
+.skill-container {
+    margin: 0px auto;
+}
+
+.skill {
+    color: $medium_gray;
+    float: left;
+    margin-bottom: $vertical_two;
+    text-align: center;
+
+    .skill--icon {
+        height: $vertical_two;
+        margin-bottom: 5px;
+    }
+
+    .skill--title {
+        color: $light_gray;
+        text-align: left;
+
+        span {
+            color: $medium_gray;
+            font-weight: 600;
+            font-size: $base_font_size;
+            font-style: italic;
+            margin-left: $base_font_size;
+        }
+    }
+
+    .skill--summary { text-align: left; }
+}
+
 @media (min-width:$tablet_width) {
     .filter-list-header { line-height: $vertical_two; }
+
+    .skill .skill--icon {
+        height: $vertical_three;
+    }
 }
 
 @media (min-width:$desktop_width) {
@@ -72,5 +125,12 @@
         padding: 0px $desktop_horizontal_padding;
 
         .mix { width: 33.333%; }
+    }
+
+    .skill-container { padding: 0px $desktop_horizontal_padding; }
+
+    .skill {
+        margin-bottom: $vertical_two;
+        min-height: 300px;
     }
 }
