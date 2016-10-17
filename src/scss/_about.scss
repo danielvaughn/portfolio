@@ -8,42 +8,83 @@
 
 .page-content--section_about {
     padding-bottom: 0px;
+    margin-top: 20px;
+    max-width: $desktop_width;
+}
 
-    p { margin-bottom: 1em; }
-
+.about-item {
+    p { margin-bottom: 0.5em; }
     a { font-weight: 400; }
 }
 
-.page-content--item-header {
+.about-item---title {
+    height: $base_font_size * 1.5;
     font-size: $base_font_size;
     color: $dark_gray;
-    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid $daniel_orange;
+
 
     &:first-letter {
         background-color: $daniel_orange;
         color: $white;
         font-size: 1.2em;
         margin-right: 2px;
-        padding: 2px;
+        padding: 2px 2px 0px;
     }
 
     span {
-        display: inline-block;
+        height: $base_font_size * 1.5;
+        line-height: $base_font_size * 1.5;
+        float: right;
         margin-left: 22px;
         font-size: 0.8em;
+        font-style: italic;
         color: $medium_gray;
     }
 }
 
+.about-item--header {
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.about-item--company, .about-item--date, .about-item--tech {
+    display: block;
+    font-style: italic;
+
+    strong {
+        font-style: normal;
+        margin-right: 3px;
+    }
+}
+
+.about-item--tech {
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding-bottom: 12px;
+}
+
+
 @media (min-width:$tablet_width) {
 
-    .page-content--item-header {
+    .about-item---title {
+        height: $tablet_font_size * 1.5;
         font-size: $tablet_font_size;
+
+        span {
+            height: $tablet_font_size * 1.5;
+            line-height: $tablet_font_size * 1.5;
+        }
     }
 
 }
 
 @media (min-width:$desktop_width) {
 
+    .page-content--section_about {
+        padding-right: $desktop_horizontal_padding;
+        padding-left: $desktop_horizontal_padding;
+    }
 
 }

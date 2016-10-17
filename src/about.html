@@ -10,72 +10,39 @@
         })
 
         <main class="page-content">
+
             <section class="page-content--section_about">
-                <p class="page-content--item">
+                <p>
                     Originally an artist and designer, I began my career transition towards software development in 2012. My background gave me a solid foundation in design thinking, and I try to carry that attention to detail to my code. Below is a selection of my most recent and notable work.
                 </p>
             </section>
 
-            <section class="page-content--section_about">
+            @@include('./partials/work-items/item-tradeit-api.html')
 
-                <div class="page-content--item">
-                    <h1 class="page-content--item-header">
-                        Multi-Broker Aggregation API
-                        <span>TradeIt, Inc</span>
-                    </h1>
+            @@include('./partials/work-items/item-tradeit-site.html')
 
-                    <p>The TradeIt product lets app developers, publishers, and ETF companies integrate any major US retail broker’s functionality into any app, site, or platform.</p>
-                    <p>I helped build and maintain a java-based web API that connects with most major US retail brokers to handle authentication, order management and portfolio management.</p>
-                    <p>You can read about the API on their <a href="https://www.trade.it/documentation/api">documentation page</a></p>
+            @@include('./partials/work-items/item-tradeit-widget.html')
 
-                </div>
+            @@include('./partials/work-items/item-tradeit-sdk.html')
 
-            </section>
+            @@include('./partials/work-items/item-kapitall-site.html')
 
-            <section class="page-content--section_about">
+            @@include('./partials/work-items/item-kapitall-mu.html')
 
-                <div class="page-content--item">
-                    <h1 class="page-content--item-header">
-                        Client Trading Widget Library
-                        <span>TradeIt, Inc</span>
-                    </h1>
+            @@include('./partials/work-items/item-mod-minutes.html')
 
-                    <p>In addition to providing an API, TradeIt allows publishers to integrate order and portfolio management functionality directly onto their site using pre-built widgets.</p>
-
-                    <p>I helped build and maintain both the widgets and the client library used to connect to the TradeIt API.</p>
-
-                    <p>To try it out, click one of the buttons below, select the 'Dummy' broker and use the following credentials:</p>
-
-                    <p>
-                        Username: dummy
-                        <br />
-                        Password: pass
-                        <br />
-                        <tradeit widget="buy-sell-stacked" stock-symbol="IBM" company-name="International Business Machines Corp" />
-                    </p>
-
-                </div>
-
-            </section>
-
-            <section class="page-content--section_about">
-
-                <div class="page-content--item">
-                    <h1 class="page-content--item-header">
-                        Client Trading iOS Library
-                        <span>TradeIt, Inc</span>
-                    </h1>
-
-                    <p>I built and maintained TradeIt's iOS SDK, which allows publishers to integrate order and portfolio management functionality directly into their app with only a few lines of code.</p>
-
-                    <p>The SDK is currently integrated into several apps, including <a target="_blank" href="https://rubicoin.com/">Rubicoin</a>, <a target="_blank" href="https://itunes.apple.com/us/app/stock-master-stocks-market/id591644846">StockMaster</a>, and <a target="_blank" href="https://itunes.apple.com/us/app/stocks-live-portfolio-manager/id473206441">StocksLive</a>.</p>
-
-                    <p>The library is now open source. To see the code, click <a href="https://github.com/tradingticket/TradeItIosTicketSDK">here</a></p>
-                </div>
-
-            </section>
+            @@include('./partials/work-items/item-sl.html')
 
         </main>
+    </div>
+
+    <div id="modal-overlay">
+        <img src="" />
+        <a href="javascript:void('closeOverlay');">
+            <svg viewBox="0 0 32 32">
+            <path fill="#ffffff" class="path1" d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+            </svg>
+        </a>
     </div>
 
     <script type="text/javascript">

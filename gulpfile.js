@@ -48,6 +48,7 @@ gulp.task('copyfiles', function() {
     gulp.src('./src/mod-minutes/**/*').pipe(gulp.dest('./.srv/mod-minutes'));
     gulp.src('./src/img/**/*').pipe(gulp.dest('./.srv/img'));
     gulp.src('./src/js/**/*').pipe(gulp.dest('./.srv/js'));
+    gulp.src('./src/*.pdf').pipe(gulp.dest('./.srv/'));
 });
 
 gulp.task('fileinclude', function() {
