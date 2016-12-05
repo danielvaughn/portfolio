@@ -1,0 +1,30 @@
+Hello,
+
+I am writing to express interest in the Front End Web Developer position at Bytio. I believe my experience would make me a good fit for your team. Throughout the last two to three years, I have worked as a full stack web developer in the financial technology space in New York City. I am looking to soon move to West Palm Beach.
+
+I currently work at TradeIt, where I helped build a JavaScript client library and a Java RESTful API that partners can use to integrate trading into their website. To date, our technology has been used to manage more than one billion dollars in assets. We also are currently working with Amazon to produce an Echo app that will allow users to manage their portfolio with Alexa.
+
+Though I began my career in the front end, my work in fin-tech has brought me across almost the entire range of development environments. I have found myself writing Java for the server, Python for command line scripts, and Objective C for iOS. While I am grateful for these experiences, I am interested in returning my focus to the front end so I can keep pursuing the latest web technologies. My current interests are ES6, React, and Mocha.
+
+My ideal work environment is one where I am surrounded by a highly collaborative team of developers that will challenge me to constantly push my own barriers. I hope to meet with you to discuss my qualifications in further detail. Thank you for your time.
+
+
+
+I am writing to express my interest in the JavaScript Developer position open at Fox News. I have been an avid reader for fifteen years and would love to have the opportunity to work for your company. My experience and background would make me a great fit for your team. Throughout the last two to three years, I have worked as a full stack web developer in the financial technology space in New York City.
+
+I currently work at TradeIt, where I helped build a JavaScript client library and a Java RESTful API that partners can use to integrate trading into their website. To date, our technology has been used to manage more than one billion dollars in assets. We also are currently working with Amazon to produce an Echo app that will allow users to manage their portfolio with Alexa.
+
+Though I began my career in the front end, my work in fin-tech has brought me across almost the entire range of development environments. I have found myself writing Java for the server, Python for command line scripts, and Objective C for iOS. While I am grateful for these experiences, I am interested in returning my focus to JavaScript so I can keep pursuing the latest web technologies. My current interests are ES6, React, and Mocha.
+
+My ideal work environment is one where I am surrounded by a highly collaborative team of developers that will challenge me to constantly push my own barriers. I hope to meet with you to discuss my qualifications in further detail. Thank you for your time.
+
+Best,
+Daniel Vaughn
+
+
+
+
+
+
+
+
